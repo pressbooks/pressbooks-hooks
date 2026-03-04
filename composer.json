@@ -1,0 +1,16 @@
+{
+    "name": "pressbooks/pressbooks-hooks",
+    "description": "Named for educator and social critic bell hooks, this theme is designed for nonfiction, reports, white papers, manuals, and other types of not-so-bookish content. Fonts include Noticia Text and Open Sans.",
+    "type": "wordpress-theme",
+    "authors": [
+        {
+            "name": "Pressbooks (Book Oven Inc.)",
+            "email": "code@pressbooks.com"
+        }
+    ],
+    "keywords": [
+        "academic",
+        "non-fiction",
+        "textbook"
+    ]
+}
