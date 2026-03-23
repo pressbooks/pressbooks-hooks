@@ -4,24 +4,26 @@
   "author": "Pressbooks (Book Oven Inc.)",
   "license": "GPL-3.0-or-later",
   "engines": {
-    "node": ">= 18"
+    "node": ">= 22"
   },
   "dependencies": {},
   "devDependencies": {
-    "pressbooks-build-tools": "^4.0.0"
+    "pressbooks-build-tools": "^6.0.0"
   },
   "scripts": {
     "fix": "npm run -s fix:styles",
-    "fix:styles": "stylelint --fix \"assets/styles/**/*.scss\" scss",
+    "fix:styles": "pressbooks-build-tools fix:styles 'assets/src/styles/**/*.scss' 'assets/styles/**/*.scss'",
     "lint": "npm run -s lint:styles",
-    "lint:styles": "stylelint  \"assets/styles/**/*.scss\" scss",
+    "lint:styles": "pressbooks-build-tools lint:styles 'assets/src/styles/**/*.scss' 'assets/styles/**/*.scss'",
     "test": "npm run -s lint"
   },
   "stylelint": {
     "extends": "./node_modules/pressbooks-build-tools/config/stylelint.js",
     "rules": {
+      "no-descending-specificity": null,
+      "no-invalid-position-at-import-rule": null,
       "scss/at-import-no-partial-leading-underscore": null,
-      "no-invalid-position-at-import-rule": null
+      "scss/dollar-variable-pattern": null
     }
   }
 }
